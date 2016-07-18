@@ -36,7 +36,7 @@ CSS Transitions have very good performance in the browser, and are easy to use, 
 
 CSS Animations let you do more advanced animations that do not have to be attatched to an event (like hover). They can be run infinitely, or a certain number of times. You can also add more 'stops'. With transitions, you must always have two stops: start and end. With CSS Animations, you can have as many stops as you want. They also have good performance because they are built in to CSS.
 
-You should definitely check out [Daniel Eden's Animate.css library](https://daneden.github.io/animate.css/). [CSS-Tricks has a great article on CSS Animations](https://css-tricks.com/almanac/properties/a/animation/). I have one of their demos below:
+You should definitely check out [Daniel Eden's Animate.css library](https://daneden.github.io/animate.css/). It has a bunch of pre-built animations that you can easily use. [CSS-Tricks has a great article on CSS Animations](https://css-tricks.com/almanac/properties/a/animation/). I have one of their demos below:
 
 <div class="box2"></div>
 
