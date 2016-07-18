@@ -14,3 +14,4 @@ gem 'middleman-livereload'
 gem 'slim'
 gem "middleman-syntax"
 gem "redcarpet"
+gem 'middleman-gh-pages'
