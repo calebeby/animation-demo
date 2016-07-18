@@ -6,8 +6,8 @@ How to edit the page:
 
 Requirements: Git, Ruby, RubyGems, Bundler, Mac or Linux
 
-1. `git clone https://github.com/calebeby/animation-demos`
-2. `cd animation-demos`
+1. `git clone https://github.com/calebeby/animation-demo`
+2. `cd animation-demo`
 3. `bundle install`
 4. Edit the page
 5. Run `middleman` to start the preview server
