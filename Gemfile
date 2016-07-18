@@ -15,3 +15,4 @@ gem 'slim'
 gem "middleman-syntax"
 gem "redcarpet"
 gem 'middleman-gh-pages'
+gem "middleman-minify-html"
