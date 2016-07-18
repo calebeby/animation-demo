@@ -94,7 +94,7 @@ GSAP is a very powerful JavaScript Animation library that has great browser supp
 }
 ```
 
-CoffeeScript is like JavaScript, except easier to read and write. The computer turns it into JavaScript. You can see the JavaScript below the CoffeeScript.
+CoffeeScript is like JavaScript, except easier to read and write. The computer turns it into JavaScript. You can see the generated JavaScript below the CoffeeScript.
 
 ```coffee
 box = document.querySelectorAll '.container .box3'
