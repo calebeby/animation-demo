@@ -9,25 +9,7 @@ layout: layout
 
 CSS transitions let you change from one state to another, smoothly:
 
-<div class='box'>Hover</div>
-
-```html
-<div class='box'>Hover</div>
-```
-
-```css
-.box {
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-  background-color: red;
-  transition: background-color 2s ease; /* Without this it would jump between states */
-}
-.box:hover {
-  background-color: green;
-  padding: 10px;
-}
-```
+<p data-height="380" data-theme-id="20340" data-slug-hash="qNxwoy" data-default-tab="css,result" data-user="calebeby" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/calebeby/pen/qNxwoy/">CSS Transitions</a> by Caleb (<a href="http://codepen.io/calebeby">@calebeby</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 You can transition many CSS properties. [A full list of animatable properties is on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 CSS Transitions have very good performance in the browser, and are easy to use, but they do not have advanced features.
@@ -38,221 +20,22 @@ CSS Animations let you do more advanced animations that do not have to be attatc
 
 You should definitely check out [Daniel Eden's Animate.css library](https://daneden.github.io/animate.css/). It has a bunch of pre-built animations that you can easily use in projects. [CSS-Tricks has a great article on CSS Animations](https://css-tricks.com/almanac/properties/a/animation/). I have one of their demos below:
 
-<div class="box2"></div>
-
-```html
-<div class="box2"></div>
-```
-
-```css
-.box2 {
-  width: 100%;
-  height: 50px;
-  animation: pulse 5s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    background-color: #001F3F;
-  }
-  10% {
-    background-color: green;
-  }
-  100% {
-    background-color: #FF4136;
-  }
-}
-```
+<p data-height="500" data-theme-id="20340" data-slug-hash="dXdLLA" data-default-tab="css,result" data-user="calebeby" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/calebeby/pen/dXdLLA/">CSS Animations</a> by Caleb (<a href="http://codepen.io/calebeby">@calebeby</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 ## GreenSock Animation Platform (GSAP)
 
-GSAP is a very powerful JavaScript Animation library that has great browser support and performs very well. GSAP is free, but they have some very useful plugins for paid members. Because it uses JavaScript, it is harder to use, but it has many more options.
+[GSAP](http://greensock.com/gsap) is a very powerful JavaScript Animation library that has great browser support and performs very well. GSAP is free, but they have some very useful plugins for paid members. Because it uses JavaScript, it is harder to use, but it has many more options.
 
-<div class='container'>
-  <div class='box3'></div>
-</div>
+<p data-height="570" data-theme-id="20340" data-slug-hash="ZOAkgA" data-default-tab="js,result" data-user="calebeby" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/calebeby/pen/ZOAkgA/">GreenSock Animation Platform</a> by Caleb (<a href="http://codepen.io/calebeby">@calebeby</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-```html
-<div class='container'>
-  <div class='box3'></div>
-</div>
-<!-- Load the script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-```
-
-```css
-.container {
-  width: 100%;
-  height: 500px;
-}
-
-.container .box3 {
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  position: absolute;
-}
-```
-
-CoffeeScript is like JavaScript, except easier to read and write. The computer turns it into JavaScript. You can see the generated JavaScript below the CoffeeScript.
-
-```coffee
-box = document.querySelectorAll '.container .box3'
-
-timeline = new TimelineMax (
-  repeat: -1 # repeat infinitely
-  yoyo: true # play forwards, reverse instead of forwards, forwards
-)
-
-#        Element duration
-#            |   |
-#            V   V
-timeline.to box, 4, (
-  right: 0              # <- Properties to change
-  ease: Power0.easeNone # <- Ease
-), 0 # <- When to start it
-
-timeline.to box, 3, (
-  y: 400
-  ease: Bounce.easeOut
-), 1
-
-timeline.to box, 3, (
-  rotation: 180
-  borderRadius: '50%' # change to circle
-  backgroundColor: 'red'
-), 1
-```
-
-```js
-var box, timeline;
-
-box = document.querySelectorAll('.container .box3');
-
-timeline = new TimelineMax({
-  repeat: -1,
-  yoyo: true
-});
-
-timeline.to(box, 4, {
-  right: 0,
-  ease: Power0.easeNone
-}, 0);
-
-timeline.to(box, 3, {
-  y: 400,
-  ease: Bounce.easeOut
-}, 1);
-
-timeline.to(box, 3, {
-  rotation: 180,
-  borderRadius: '50%',
-  backgroundColor: 'red'
-}, 1);
-```
+Petr Tichy has some great GreenSock resources. [His blog posts are very helpful](https://ihatetomatoes.net/?s=greensock&post_type=post), as well as his [GreenSock Cheatsheet](https://ihatetomatoes.net/wp-content/uploads/2016/07/GreenSock-Cheatsheet-4.pdf).
 
 ## ScrollMagic
 
-<div class='container'>
-  <div class='box4'></div>
-</div>
+[ScrollMagic](http://scrollmagic.io/) is a really cool parallax scrolling JS library. It allows you to attatch [GreenSock](http://greensock.com/gsap) and [Velocity](http://velocityjs.org/) animations to the scroll of the page. See the demo below:
 
-```html
-<!-- get TweenMax -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
-<!-- get ScrollMagic -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<!-- get TweenMax plugin for ScrollMagic -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js"></script>
-```
+<p data-height="500" data-theme-id="20340" data-slug-hash="oLERNO" data-default-tab="js,result" data-user="calebeby" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/calebeby/pen/oLERNO/">ScrollMagic</a> by Caleb (<a href="http://codepen.io/calebeby">@calebeby</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-```css
-.container {
-  width: 100%;
-  height: 500px;
-}
+Again, Petr Tichy explains ScrollMagic really well in his [blog posts](https://ihatetomatoes.net/?s=scrollmagic&post_type=post) and [ScrollMagic Cheatsheet](https://ihatetomatoes.net/wp-content/uploads/2016/07/ScrollMagic-CheatsheetV1.pdf).
 
-.container .box3 {
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  position: absolute;
-}
-```
-
-```coffee
-# Get elements
-scrollBox = document.querySelectorAll('.container .box4')[0]
-
-container = scrollBox.parentNode
-
-# Setup TimelineMax
-scrollTimeline = new TimelineMax()
-
-# Create animations
-# Same as before
-scrollTimeline.to scrollBox, 4, (
-  right: 0
-  ease: Power0.easeNone
-), 0
-
-scrollTimeline.to scrollBox, 3, (
-  y: 400
-  ease: Bounce.easeOut
-), 1
-
-scrollTimeline.to scrollBox, 3, (
-  rotation: 180
-  borderRadius: '50%'
-  backgroundColor: 'red'
-), 1
-
-# Setup controller
-controller = new ScrollMagic.Controller()
-
-# Setup scene
-scene = new ScrollMagic.Scene (
-  triggerElement: container # When the container
-  triggerHook: 'onLeave'    # Gets to the top of the screen, start the animation.
-  duration: 500             # Which lasts for 500px
-)
-  .addTo controller         # Connect  it to the controller
-  .setTween scrollTimeline  # Add the animation to it
-  .setPin container         # Pin the container in place when you scroll to it
-```
-
-```js
-var container, controller, scene, scrollBox, scrollTimeline;
-
-scrollBox = document.querySelectorAll('.container .box4')[0];
-
-container = scrollBox.parentNode;
-
-scrollTimeline = new TimelineMax();
-
-scrollTimeline.to(scrollBox, 4, {
-  right: 0,
-  ease: Power0.easeNone
-}, 0);
-
-scrollTimeline.to(scrollBox, 3, {
-  y: 400,
-  ease: Bounce.easeOut
-}, 1);
-
-scrollTimeline.to(scrollBox, 3, {
-  rotation: 180,
-  borderRadius: '50%',
-  backgroundColor: 'red'
-}, 1);
-
-controller = new ScrollMagic.Controller();
-
-scene = new ScrollMagic.Scene({
-  triggerElement: container,
-  duration: 500,
-  triggerHook: 'onLeave'
-}).addTo(controller).setTween(scrollTimeline).setPin(container);
-
-```
 
