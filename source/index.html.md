@@ -38,4 +38,9 @@ Petr Tichy has some great GreenSock resources. [His blog posts are very helpful]
 
 Again, Petr Tichy explains ScrollMagic really well in his [blog posts](https://ihatetomatoes.net/?s=scrollmagic&post_type=post) and [ScrollMagic Cheatsheet](https://ihatetomatoes.net/wp-content/uploads/2016/07/ScrollMagic-CheatsheetV1.pdf).
 
+## Three.js
 
+[Three.js](http://threejs.org/) is a really cool 3D animation library for JS. It is rather complicated, but [people have done really cool stuff with it](http://threejs.org/).
+
+<p data-height="500" data-theme-id="20340" data-slug-hash="AXyOpZ" data-default-tab="js,result" data-user="calebeby" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/calebeby/pen/AXyOpZ/">three.js</a> by Caleb (<a href="http://codepen.io/calebeby">@calebeby</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+=
