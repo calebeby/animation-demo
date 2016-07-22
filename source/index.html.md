@@ -4,7 +4,7 @@ layout: layout
 ---
 
 # Transitions, Animations, and Parallax Effects
-
+# Transitions, Animations, and Parallax Effects
 ## CSS Transitions
 
 CSS transitions let you change from one state to another, smoothly:
